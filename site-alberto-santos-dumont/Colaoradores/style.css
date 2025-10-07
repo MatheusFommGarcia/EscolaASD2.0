@@ -495,7 +495,7 @@ input:checked + .slider::before {
 body.light {
   --bg-color-01: #1a1a1a;
   --bg-color-02: #2d2d2d;
-  --text-color: #000000;
+  --text-color: #ffffff;
   --main-color: #4da6ff;
   --color-01: #cccccc;
 }
@@ -906,11 +906,24 @@ input:checked + .slider::before {
 
 body.light {
   --cor-primaria: #5a5a5a;
-  --cor-secundaria: #fefefebf;
+  --cor-secundaria: #020202bf;
   --cor-destaque: #ffffff;
   --cor-menu: #5a5a5a82;
 }
 
 #endereco {
   padding-top: 0px;
+}
+
+/* ===== Ajustes de cores no modo escuro ===== */
+body.light .hamburguer span {
+  background: #ffffff; /* Tracinhos brancos */
+}
+
+body.light .menu-topo a {
+  color: #ffffff !important; /* Texto branco */
+}
+
+body.light .menu-topo a:hover {
+  color: #ffdd57; /* Cor de destaque no hover */
 }
