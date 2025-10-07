@@ -1,11 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById('hamburguer');
-  const navLateral = document.getElementById('menu-lateral');
+  const btn = document.getElementById("hamburguer");
+  const navLateral = document.getElementById("menu-lateral");
 
-  btn.addEventListener('click', () => {
-    navLateral.classList.toggle('show');
-    btn.classList.toggle('ativo');
-  });
+  // Criar overlay
+  const overlay = document.createElement("div");
+  overlay.classList.add("page-overlay");
+  document.body.appendChild(overlay);
+
+  const toggleMenu = () => {
+    const ativo = navLateral.classList.toggle("show");
+    btn.classList.toggle("ativo", ativo);
+    overlay.classList.toggle("show", ativo);
+  };
+
+  btn.addEventListener("click", toggleMenu);
+  overlay.addEventListener("click", toggleMenu);
 });
 
 class ThemeController {
