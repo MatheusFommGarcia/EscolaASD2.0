@@ -927,3 +927,111 @@ body.light .menu-topo a {
 body.light .menu-topo a:hover {
   color: #ffdd57; /* Cor de destaque no hover */
 }
+
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-destaque);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1000;
+}
+
+.header-titulo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.nome-escola {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin: 0;
+}
+
+.hamburguer {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 35px;
+  height: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1101;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+/* Quando o menu está aberto, o X acompanha o scroll */
+.hamburguer.ativo {
+  position: fixed;
+  top: 2.5rem;
+  left: 2rem;
+  transform: translateY(0);
+}
+
+/* ==================== MOBILE (até 600px) ==================== */
+@media (max-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem 2.5rem;
+    position: relative;
+  }
+
+  .header-titulo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Ajustando hambúrguer no mobile */
+  .hamburguer {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 35px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    margin: 0;
+  }
+
+  /* X acompanha scroll no mobile também */
+  .hamburguer.ativo {
+    position: fixed;
+    top: 1.5rem;
+    left: 1rem;
+    transform: translateY(0);
+  }
+
+  .hamburguer span {
+    height: 5px;
+    border-radius: 3px;
+  }
+
+  .nome-escola {
+    font-size: 1rem;
+    position: static;
+    transform: none;
+    margin: 0;
+    text-align: left;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}
