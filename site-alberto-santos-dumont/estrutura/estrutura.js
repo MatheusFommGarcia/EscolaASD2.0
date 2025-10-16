@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
 // Botão voltar ao topo
 const btnTopo = document.getElementById("topBtn");
 
@@ -121,3 +120,5 @@ document.addEventListener('keydown', e => {
     if (e.key === 'ArrowRight') btnNext.click();
   }
 });
+
+
